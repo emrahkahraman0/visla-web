@@ -1,0 +1,449 @@
+/////ABOUT
+
+//About_Page#
+#about_page {
+  width: 100%;
+  padding: 65px 0;
+  background: linear-gradient( rgba(20, 20, 20, .7), rgba(20, 20, 20, .7)), url("https://via.placeholder.com/1920x200");
+  background-position: center;
+  @include bg-size(cover);
+  //&_text
+  .text {
+    h6 {
+      color: $base-color;
+      font-size: 35px;
+      text-transform: uppercase;
+      @include weight(black);
+      letter-spacing: 1px;
+      line-height: 20px;
+    }
+    ul {
+      padding-top: 25px;
+      li {
+        display: inline-block;
+        margin-right: 6px;
+        a {
+          color: $base-color;
+          text-transform: capitalize;
+          @include weight(regular);
+          font-size: $size;
+          span {
+            padding-left: 6px;
+          }
+        }
+      }
+    }
+    //Tablet
+    @include tablet {
+      text-align: center;
+      h6 {font-size: 25px}
+      ul {
+        padding-top: 20px;
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      h6 {font-size: 18px}
+      ul {
+        padding-top: 15px;
+      }
+    }
+    //Mobil
+    @include mobil {
+      h6 {font-size: $size}
+      ul {
+        li {
+          display: block;
+          margin: 0 0 6px 0;
+          &:last-child {
+            margin: 0 0 0 0;
+          }
+          a {
+            font-size: 12px;
+            span {padding-left: 4px}
+          }
+        }
+      }
+    }
+  }
+}
+
+//About_İnfo#
+#about_info {
+  width: 100%;
+  padding: 70px 0 70px 0;
+  //about_info
+  .about_info {
+    //&_video
+    &_video {
+      iframe {width: 100%}
+    }
+    //&_text
+    &_text {
+      h5 {
+        font-size: 30px;
+        color: $primary-color;
+        @include weight(black);
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        line-height: normal;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -15px;
+          left: 0;
+          width: 70px;
+          height: 4px;
+          background-color: $secondary-color;
+        }
+        //Tablet
+        @include tablet {
+          font-size: 20px;
+          &::before {bottom: -15px}
+        }
+        //Mobil
+        @include mobil {
+          font-size: $size;
+          &::before {bottom: -13px}
+        }
+      }
+      h6 {
+        padding-top: 40px;
+        @include weight(bold);
+        font-size: 18px;
+        letter-spacing: 0.3px;
+        line-height: 25px;
+      }
+      p {
+        padding-top: 20px;
+        color: $three-color;
+        font-size: $size;
+        line-height: 20px;
+      }
+    }
+    //Notebook
+    @include notebook {
+      &_text {margin-top: 30px}
+    }
+    //Tablet
+    @include tablet {
+      &_text {
+        h6 {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      &_text {
+        h6 {
+          font-size: $size;
+          line-height: 18px;
+        }
+        p {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+  //info_text
+  .info_text {
+    padding-top: 60px;
+    h5 {
+      font-size: 30px;
+      color: $primary-color;
+      @include weight(black);
+      letter-spacing: 1px;
+      text-transform: capitalize;
+      line-height: normal;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        width: 70px;
+        height: 4px;
+        background-color: $secondary-color;
+      }
+      //Tablet
+      @include tablet {
+        font-size: 20px;
+        &::before {bottom: -15px}
+      }
+      //Mobil
+      @include mobil {
+        font-size: $size;
+        &::before {bottom: -13px}
+      }
+    }
+    h6 {
+      padding-top: 40px;
+      @include weight(bold);
+      font-size: 18px;
+      letter-spacing: 0.3px;
+      line-height: normal;
+    }
+    p {
+      padding-top: 15px;
+      color: $three-color;
+      font-size: $size;
+      line-height: 20px;
+    }
+    //Tablet
+    @include tablet {
+      h6 {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+    //Mobil
+    @include mobil {
+      h6 {
+        font-size: $size;
+        line-height: 18px;
+      }
+      p {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+//About_counter#
+#about_counter {
+  width: 100%;
+  padding: 135px 0 135px 0;
+  background: linear-gradient( rgba(20, 20, 20, .7), rgba(20, 20, 20, .7)), url("https://via.placeholder.com/1920x300");
+  background-position: center;
+  @include bg-size(cover);
+  //about_counter
+  .about_counter {
+    text-align: center;
+    //&_item
+    &_item {
+      .count {
+        font-size: 50px;
+        @include weight(bold);
+        color: $secondary-color;
+        letter-spacing: 1px;
+        line-height: normal;
+      }
+      .count_name {
+        padding-top: 15px;
+        text-transform: capitalize;
+        @include weight(bold);
+        font-size: 18px;
+        color: $base-color;
+        line-height: 18px;
+        letter-spacing: 0.3px;
+      }
+    }
+  }
+  //Notebook
+  @include notebook {
+    padding: 135px 0 105px 0;
+    .about_counter {
+      &_item {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  //X-Tablet
+  @include x-tablet {
+    .about_counter {
+      &_item {
+        .count {font-size: 35px}
+        .count_name {font-size: 16px; padding-top: 10px}
+      }
+    }
+  }
+  //Mobil
+  @include mobil {
+    .about_counter {
+      &_item {
+        .count {font-size: 25px}
+        .count_name {font-size: $size;}
+      }
+    }
+  }
+}
+
+//About_Team#
+#about_team {
+  width: 100%;
+  padding: 70px 0 70px 0;
+  //title
+  .title {
+    font-size: 30px;
+    color: $primary-color;
+    @include weight(black);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    line-height: normal;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      width: 70px;
+      height: 4px;
+      background-color: $secondary-color;
+    }
+    //Tablet
+    @include tablet {
+      font-size: 20px;
+      &::before {bottom: -15px}
+    }
+    //Mobil
+    @include mobil {
+      font-size: $size;
+      &::before {bottom: -13px}
+    }
+  }
+  //about_team
+  .about_team {
+    padding-top: 70px;
+    //&_item
+    &_item {
+      position: relative;
+      img {width: 100%;}
+      .team_desc {
+        position: relative;
+        z-index: 2;
+        background-color: $base-color;
+        @include transition(0.3s);
+        opacity: 0;
+        visibility: hidden;
+        h6 {
+          padding-top: 25px;
+          @include weight(bold);
+          color: $primary-color;
+          text-transform: capitalize;
+          font-size: 18px;
+          line-height: 18px;
+          letter-spacing: 0.3px;
+        }
+        p {
+          padding-top: 10px;
+          color: $three-color;
+          font-size: $size;
+          @include weight(regular);
+          letter-spacing: 0.3px;
+          line-height: 18px;
+        }
+      }
+      .social {
+        @include flex;
+        @include align-items(center);
+        @include justify-content(center);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: #2f2f2f;
+        @include transition(0.3s);
+        opacity: 0;
+        visibility: hidden;
+        li {
+          display: inline-block;
+          margin-right: 10px;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            i {
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+              @include border-radius(2px);
+              text-align: center;
+              background-color: $base-color;
+              color: $secondary-color;
+              @include transition(0.3s);
+            }
+            &:hover {
+              i {
+                background-color: $secondary-color;
+                color: $base-color;
+              }
+            }
+          }
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        .team_desc {
+          opacity: 1;
+          visibility: visible;
+        }
+        .social {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      //Tablet
+      @include tablet {
+        text-align: center;
+      }
+      //X-Tablet
+      @include x-tablet {
+        h6 {font-size: 16px;}
+      }
+      //Mobil
+      @include mobil {
+        h6 {font-size: $size; line-height: 16px;}
+        p {font-size: 12px; line-height: 16px;}
+      }
+      //Small
+      @include small {
+        .social {
+          li {
+            margin-right: 5px;
+            a {
+              i {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+    //owl-nav
+    .owl-nav {
+      margin-top: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      .owl-prev, .owl-next {
+        width: 30px;
+        height: 30px;
+        background-color: #cccccc;
+        color: $base-color;
+        &:focus, &:hover {
+          background-color: $secondary-color;
+        }
+      }
+      //Tablet
+      @include tablet {
+        .owl-prev, .owl-next {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      //Mobil
+      @include mobil {
+        margin-top: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,248 @@
+/////SERVİCES-DETAİLS
+
+//Services_Page#
+#services_details_page {
+  width: 100%;
+  padding: 65px 0;
+  background: linear-gradient( rgba(20, 20, 20, .7), rgba(20, 20, 20, .7)), url("https://via.placeholder.com/1920x200");
+  background-position: center;
+  @include bg-size(cover);
+  //&_text
+  .text {
+    h6 {
+      color: $base-color;
+      font-size: 35px;
+      text-transform: uppercase;
+      @include weight(black);
+      letter-spacing: 1px;
+      line-height: 20px;
+    }
+    ul {
+      padding-top: 25px;
+      li {
+        display: inline-block;
+        margin-right: 6px;
+        a {
+          color: $base-color;
+          text-transform: capitalize;
+          @include weight(regular);
+          font-size: $size;
+          span {
+            padding-left: 6px;
+          }
+        }
+      }
+    }
+    //Tablet
+    @include tablet {
+      text-align: center;
+      h6 {font-size: 25px}
+      ul {
+        padding-top: 20px;
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      h6 {font-size: 18px}
+      ul {
+        padding-top: 15px;
+      }
+    }
+    //Mobil
+    @include mobil {
+      h6 {font-size: $size}
+      ul {
+        li {
+          display: block;
+          margin: 0 0 6px 0;
+          &:last-child {
+            margin: 0 0 0 0;
+          }
+          a {
+            font-size: 12px;
+            span {padding-left: 4px}
+          }
+        }
+      }
+    }
+  }
+}
+
+//Services_Details#
+#services_details {
+  width: 100%;
+  padding: 70px 0 70px 0;
+  //services_details
+  .services_details {
+    //&_menu
+    &_menu {
+      border-right: 1px solid #e5e5e5;
+      h6 {
+        color: $primary-color;
+        font-size: 22px;
+        @include weight(bold);
+        text-transform: capitalize;
+        letter-spacing: 0.3px;
+      }
+      ul {
+        padding-top: 40px;
+        li {
+          display: block;
+          padding-bottom: 15px;
+          a {
+            text-transform: capitalize;
+            font-size: $size;
+            color: $three-color;
+            @include weight(regular);
+            line-height: normal;
+            letter-spacing: 0.3px;
+            @include transition(0.3s);
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+          .active, a.active {
+            color: $secondary-color
+          }
+        }
+      }
+    }
+    //&_single
+    &_single {
+      //services_details_image
+      .services_details_image {
+        #sync1, #sync2 {
+          .item {
+            img {@include border-radius(3px)}
+          }
+        }
+        #sync2 {
+          margin-top: 20px;
+          .current .item{
+            border: 3px solid $secondary-color;
+          }
+        }
+      }
+      .details_text {
+        padding-top: 30px;
+        padding-left: 15px;
+        h6 {
+          font-size: 18px;
+          @include weight(bold);
+          line-height: normal;
+          letter-spacing: 0.3px;
+        }
+        p {
+          padding-top: 15px;
+          color: $three-color;
+          font-size: $size;
+          line-height: 20px;
+          letter-spacing: 0.3px;
+        }
+      }
+      //details_info
+      .details_info {
+        padding-top: 30px;
+        //&_item
+        &_item {
+          h5 {
+            font-size: 18px;
+            @include weight(bold);
+            line-height: normal;
+            letter-spacing: 0.3px;
+          }
+          p {
+            padding-top: 10px;
+            color: $three-color;
+            font-size: $size;
+            line-height: 20px;
+            letter-spacing: 0.3px;
+          }
+        }
+      }
+    }
+    //Notebook
+    @include notebook {
+      &_single {
+        .details_info {
+          &_item {
+            margin-bottom: 20px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+    //Tablet
+    @include tablet {
+      &_menu {
+        text-align: center;
+        border-right: none;
+        border-bottom: 1px solid #e5e5e5;
+        h6 {font-size: 16px;}
+        ul {
+          padding-top: 30px;
+          li {
+            padding-bottom: 10px;
+          }
+        }
+      }
+      &_single {
+        margin-top: 30px;
+        .details_text {
+          padding-left: 0;
+        }
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      &_single {
+        .details_text {
+          h6 {font-size: 16px}
+          p {padding-top: 10px}
+        }
+        .details_info {
+          &_item {
+            h5 {font-size: 16px;}
+          }
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_menu
+      &_menu {
+        h6 {
+          font-size: $size;
+          line-height: 16px;
+        }
+        ul {
+          padding-top: 20px;
+          li {
+            padding-bottom: 7px;
+            a {font-size: 12px}
+          }
+        }
+      }
+      //&_single
+      &_single {
+        .services_details_image {
+          #sync2 {
+            margin-top: 10px;
+          }
+        }
+        .details_text {
+          h6 {font-size: $size}
+          p {font-size: 12px; line-height: 17px}
+        }
+        .details_info {
+          &_item {
+            h5 {font-size: $size}
+            p {font-size: 12px; line-height: 17px}
+          }
+        }
+      }
+    }
+  }
+}

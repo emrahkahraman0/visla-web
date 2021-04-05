@@ -1,0 +1,145 @@
+/////SERVİCES
+
+//Services_Page#
+#services_page {
+  width: 100%;
+  padding: 65px 0;
+  background: linear-gradient( rgba(20, 20, 20, .7), rgba(20, 20, 20, .7)), url("https://via.placeholder.com/1920x200");
+  background-position: center;
+  @include bg-size(cover);
+  //&_text
+  .text {
+    h6 {
+      color: $base-color;
+      font-size: 35px;
+      text-transform: uppercase;
+      @include weight(black);
+      letter-spacing: 1px;
+      line-height: 20px;
+    }
+    ul {
+      padding-top: 25px;
+      li {
+        display: inline-block;
+        margin-right: 6px;
+        a {
+          color: $base-color;
+          text-transform: capitalize;
+          @include weight(regular);
+          font-size: $size;
+          span {
+            padding-left: 6px;
+          }
+        }
+      }
+    }
+    //Tablet
+    @include tablet {
+      text-align: center;
+      h6 {font-size: 25px}
+      ul {
+        padding-top: 20px;
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      h6 {font-size: 18px}
+      ul {
+        padding-top: 15px;
+      }
+    }
+    //Mobil
+    @include mobil {
+      h6 {font-size: $size}
+      ul {
+        li {
+          display: block;
+          margin: 0 0 6px 0;
+          &:last-child {
+            margin: 0 0 0 0;
+          }
+          a {
+            font-size: 12px;
+            span {padding-left: 4px}
+          }
+        }
+      }
+    }
+  }
+}
+
+//Our_Services#
+#our_services {
+  width: 100%;
+  padding: 70px 0 20px 0;
+  //our_services
+  .our_services {
+    //&_item
+    &_item {
+      margin-bottom: 50px;
+      img {width: 100%}
+      h6 {
+        padding-top: 20px;
+        line-height: normal;
+        letter-spacing: 0.3px;
+        a {
+          @include weight(bold);
+          font-size: 18px;
+          text-transform: capitalize;
+          color: $primary-color;
+        }
+      }
+      p {
+        padding-top: 15px;
+        color: $three-color;
+        letter-spacing: 0.3px;
+        line-height: 20px;
+      }
+      .read_more {
+        padding-top: 20px;
+        @include flex;
+        @include align-items(center);
+        color: $secondary-color;
+        h5 {
+          @include weight(bold);
+          line-height: normal;
+          text-transform: capitalize;
+          font-size: $size;
+        }
+        i {
+          padding: 1px 0 0 15px;
+        }
+      }
+    }
+    //Tablet
+    @include tablet {
+      text-align: center;
+      h6 {padding-top: 15px;}
+      p {padding-top: 12px;}
+      .read_more {
+        padding-top: 15px;
+        @include justify-content(center);
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      h6 {
+        a {font-size: 16px}
+      }
+    }
+    //Mobil
+    @include mobil {
+      h6 {
+        a {font-size: $size}
+      }
+      p {padding-top: 12px; font-size: 12px; line-height: 18px}
+      .read_more {
+        padding-top: 15px;
+        h5 {font-size: 12px}
+        i {
+          padding: 0 0 0 10px;
+        }
+      }
+    }
+  }
+}

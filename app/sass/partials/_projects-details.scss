@@ -1,0 +1,194 @@
+/////PROJECTS-DETAİLS
+
+//Projects_Page#
+#projects_details_page {
+    width: 100%;
+    padding: 65px 0;
+    background: linear-gradient( rgba(20, 20, 20, .7), rgba(20, 20, 20, .7)), url("https://via.placeholder.com/1920x200");
+    background-position: center;
+    @include bg-size(cover);
+    //&_text
+    .text {
+      h6 {
+        color: $base-color;
+        font-size: 35px;
+        text-transform: uppercase;
+        @include weight(black);
+        letter-spacing: 1px;
+        line-height: 20px;
+      }
+      ul {
+        padding-top: 25px;
+        li {
+          display: inline-block;
+          margin-right: 6px;
+          a {
+            color: $base-color;
+            text-transform: capitalize;
+            @include weight(regular);
+            font-size: $size;
+            span {
+              padding-left: 6px;
+            }
+          }
+        }
+      }
+      //Tablet
+      @include tablet {
+        text-align: center;
+        h6 {font-size: 25px}
+        ul {
+          padding-top: 20px;
+        }
+      }
+      //X-Tablet
+      @include x-tablet {
+        h6 {font-size: 18px}
+        ul {
+          padding-top: 15px;
+        }
+      }
+      //Mobil
+      @include mobil {
+        h6 {font-size: $size}
+        ul {
+          li {
+            display: block;
+            margin: 0 0 6px 0;
+            &:last-child {
+              margin: 0 0 0 0;
+            }
+            a {
+              font-size: 12px;
+              span {padding-left: 4px}
+            }
+          }
+        }
+      }
+    }
+}
+
+//Projects_Details#
+#projects_details {
+    width: 100%;
+    padding: 70px 0 70px 0;
+    //projects_details_image
+    .projects_details_image {
+        //owl-nav
+        .owl-nav {
+            .owl-prev, .owl-next {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                background-color: $secondary-color;
+                color: $base-color;
+            }
+            .owl-prev {
+                position: absolute;
+                top: 50%;
+                left: 3%;
+                @include translate(-50%, -50%);
+            }
+            .owl-next {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                @include translate(-50%, -50%);
+            }
+            //Tablet
+            @include tablet {
+                .owl-prev, .owl-next {
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                }
+                .owl-prev {
+                    left: 4%;
+                }
+                .owl-next {
+                    right: -2%;
+                }
+            }
+            //Small
+            @include small {
+                .owl-prev, .owl-next {
+                    width: 25px;
+                    height: 25px;
+                    line-height: 25px;
+                    font-size: 9px;
+                }
+                .owl-prev {
+                    left: 7%;
+                }
+                .owl-next {
+                    right: 0;
+                }
+            }
+        }
+    }
+    //project_details_desc
+    .project_details_desc {
+      padding-top: 40px;
+      //projects_overview
+      .projects_overview {
+        h6 {
+          color: $primary-color;
+          font-size: 25px;
+          @include weight(bold);
+          letter-spacing: 0.3px;
+          line-height: normal;
+          padding-bottom: 20px;
+        }
+        p {
+          color: $three-color;
+          font-size: $size;
+          line-height: 20px;
+          letter-spacing: 0.3px;
+        }
+        ul {
+          li {
+            color: $three-color;
+            font-size: $size;
+            padding-bottom: 15px;
+            &:last-child {
+              padding-bottom: 0;
+            }
+            span {
+              padding-left: 5px;
+              @include weight(black);
+            }
+          }
+        }
+      }
+      //Tablet
+      @include tablet {
+        .projects_overview {
+          margin-bottom: 30px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      //X-Tablet
+      @include x-tablet {
+        .projects_overview {
+          h6 {font-size: 18px;}
+        }
+      }
+      //Mobil
+      @include mobil {
+        .projects_overview {
+          h6 {font-size: $size;}
+          p {font-size: 12px; line-height: 15px;}
+          ul {
+            li {
+              line-height: normal;
+              padding-bottom: 10px;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+}

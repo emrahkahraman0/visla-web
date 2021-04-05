@@ -1,0 +1,193 @@
+/////FOOTER
+
+//Footer#
+#footer {
+  width: 100%;
+  padding: 50px 0 50px 0;
+  background-color: #202020;
+  //footer
+  .footer {
+    color: $four-color;
+    //&_navigation, &_info, &_sub
+    &_navigation, &_info, &_sub {
+      h6 {
+        color: $base-color;
+        @include weight(bold);
+        font-size: 18px;
+        letter-spacing: 0.3px;
+        text-transform: capitalize;
+        line-height: normal;
+        margin-bottom: 30px;
+      }
+    }
+    //&_logo
+    &_logo {
+      p {
+        padding-top: 30px;
+        font-size: $size;
+        line-height: 22px;
+        letter-spacing: 0.3px;
+      }
+    }
+    //&_navigation
+    &_navigation {
+      ul {
+        li {
+          display: block;
+          padding-bottom: 15px;
+          &:last-child {
+            padding-bottom: 0;
+          }
+          a {
+            color: $four-color;
+            line-height: normal;
+            @include weight(medium);
+            font-size: $size;
+            @include transition(0.3s);
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+    //&_info
+    &_info {
+      p {
+        font-size: $size;
+        line-height: 20px;
+        letter-spacing: 0.3px;
+      }
+      .text {
+        padding-top: 30px;
+        h5 {
+          font-size: $size;
+          line-height: normal;
+          letter-spacing: 0.3px;
+          padding-bottom: 10px;
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+    //&_sub
+    &_sub {
+      p {
+        font-size: $size;
+        line-height: 20px;
+        letter-spacing: 0.3px;
+      }
+      .text_input {
+        padding-top: 30px;
+        position: relative;
+        input {
+          width: 100%;
+          background-color: #343434;
+          padding: 15px 20px;
+          color: $four-color;
+        }
+        i {
+          color: $secondary-color;
+          position: absolute;
+          top: 48px;
+          right: 20px;
+          z-index: 1;
+        }
+      }
+    }
+    //Large
+    @include large {
+      //&_sub
+      &_sub {margin-top: 30px}
+    }
+    //Notebook
+    @include notebook {
+      //&_info
+      &_info {margin-top: 30px}
+    }
+    //Tablet
+    @include tablet {
+      //&_navigation
+      &_navigation {margin-top: 30px}
+    }
+    //X-Tablet
+    @include x-tablet {
+      //&_navigation, &_info, &_sub
+      &_navigation, &_info, &_sub {
+        h6 {
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_navigation, &_info, &_sub
+      &_navigation, &_info, &_sub {
+        h6 {font-size: $size;}
+      }
+      //&_logo
+      &_logo {
+        p {
+          font-size: 12px; line-height: 20px;
+          br {display: none}
+        }
+      }
+      //&_navigation
+      &_navigation {
+        ul {
+          li {
+            padding-bottom: 10px;
+            a {font-size: 12px}
+          }
+        }
+      }
+      //&_info
+      &_info {
+        p {
+          font-size: 12px; line-height: 18px;
+        }
+        .text {
+          padding-top: 20px;
+          h5 {
+            font-size: 12px;
+            padding-bottom: 6px;
+          }
+        }
+      }
+      //&_sub
+      &_sub {
+        p {
+          font-size: 12px; line-height: 18px;
+        }
+        .text_input {
+          input {padding: 10px 15px;}
+          i {
+            top: 42px;
+            right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Copyright#
+#copyright {
+  width: 100%;
+  padding: 20px 0 20px 0;
+  background-color: #141414;
+  //center
+  .center {
+    text-align: center;
+    color: $four-color;
+    font-size: $size;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+  }
+  //Mobil
+  @include mobil {
+    .center {font-size: 12px; line-height: 18px}
+  }
+}

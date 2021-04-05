@@ -1,0 +1,995 @@
+/////HOME
+
+//Home_Slider#
+#home_slider {
+  width: 100%;
+  //home_slider
+  .home_slider {
+    position: relative;
+    //&_item
+    &_item {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.6);
+      }
+      //caption
+      .caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translate(-50%, -50%);
+        text-align: center;
+        color: $base-color;
+        h6 {
+          text-transform: uppercase;
+          font-size: 50px;
+          letter-spacing: 1px;
+          line-height: normal;
+          @include weight(black);
+        }
+        p {
+          padding-top: 20px;
+          font-size: 24px;
+          letter-spacing: 0.3px;
+          line-height: normal;
+        }
+        button {
+          margin-top: 50px;
+          padding: 15px 30px;
+          background-color: $secondary-color;
+          @include border-radius(3px);
+          a {
+            text-transform: uppercase;
+            @include weight(bold);
+            font-size: $size;
+            color: $base-color;
+          }
+        }
+      }
+      //Large
+      @include large {
+        .caption {
+          h6 {font-size: 30px}
+          p {font-size: 20px; padding-top: 10px}
+          button {
+            margin-top: 30px;
+          }
+        }
+      }
+      //Tablet
+      @include tablet {
+        img {
+          height: 100vh;
+          object-fit: cover;
+        }
+        .caption {
+          h6 {font-size: 25px}
+          p {font-size: 18px;}
+        }
+      }
+      //X-Tablet
+      @include x-tablet {
+        .caption {
+          h6 {font-size: 20px}
+          p {font-size: 16px;}
+        }
+      }
+      //Mobil
+      @include mobil {
+        .caption {
+          h6 {font-size: 16px; line-height: 22px}
+          p {font-size: $size; padding-top: 15px}
+          button {
+            padding: 10px 20px;
+            a {font-size: 12px}
+          }
+        }
+      }
+    }
+    //owl-dots
+    .owl-dots {
+      margin-top: 0;
+      position: absolute;
+      bottom: 2%;
+      left: 0;
+      right: 0;
+      .owl-dot {
+        span {background-color: $base-color}
+      }
+      .active {
+        span {background-color: $secondary-color}
+      }
+    }
+  }
+}
+
+//Home_Services#
+#home_services {
+  width: 100%;
+  padding: 70px 0 70px 0;
+  //title
+  .title {
+    text-align: center;
+    font-size: 30px;
+    color: $primary-color;
+    @include weight(black);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    line-height: normal;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      right: 0;
+      width: 70px;
+      height: 4px;
+      margin: 0 auto;
+      background-color: $secondary-color;
+    }
+    //Tablet
+    @include tablet {
+      font-size: 20px;
+      &::before {bottom: -15px}
+    }
+    //Mobil
+    @include mobil {
+      font-size: $size;
+      &::before {bottom: -13px}
+    }
+  }
+  //home_services_tab
+  .home_services_tab {
+    padding-top: 70px;
+    //tab-list
+    .tab-list {
+      text-align: center;
+      border-bottom: 1px solid #e5e5e5;
+      li {
+        display: inline-block;
+        margin-right: 60px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          i {color: $secondary-color}
+          h6 {
+            padding-top: 15px;
+            @include weight(bold);
+            font-size: 18px;
+            letter-spacing: 0.3px;
+            color: $primary-color;
+            line-height: normal;
+          }
+        }
+        &.aktif {
+          border-bottom: 3px solid $secondary-color;
+          a {
+            h6 {
+              padding-bottom: 40px;
+            }
+          }
+        }
+      }
+      //Notebook
+      @include notebook {
+        li {
+          margin-right: 30px;
+          a {
+            h6 {font-size: $size; padding-top: 10px}
+          }
+        }
+      }
+      //X-Tablet
+      @include x-tablet {
+        li {
+          margin-right: 15px;
+          &.aktif {
+            a {
+              h6 {padding-bottom: 30px}
+            }
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        border-bottom: none;
+        li {
+          display: block;
+          margin: 0 0 20px 0;
+          &:last-child {
+            margin: 0 0 0 0;
+          }
+          a {
+            h6 {font-size: 12px}
+          }
+          &.aktif {
+            a {
+              h6 {padding-bottom: 0; font-size: 12px}
+            }
+          }
+        }
+      }
+    }
+    //tab-content
+    .tab-content {
+      padding-top: 50px;
+      //&_image
+      &_image {
+        img {width: 100%}
+      }
+      //&_text
+      &_text {
+        h5 {
+          font-size: 30px;
+          line-height: normal;
+          letter-spacing: 0.3px;
+          @include weight(bold);
+        }
+        p {
+          padding-top: 20px;
+          color: $three-color;
+          font-size: $size;
+          line-height: 20px;
+          letter-spacing: 0.3px;
+        }
+      }
+      //Notebook
+      @include notebook {
+        &_text {
+          margin-top: 20px;
+          h5 {font-size: 25px}
+          p {padding-top: 15px}
+        }
+      }
+      //X-Tablet
+      @include x-tablet {
+        &_text {
+          h5 {font-size: 20px}
+        }
+      }
+      //Mobil
+      @include mobil {
+        &_text {
+          h5 {font-size: $size}
+          p {
+            font-size: 12px;
+            line-height: 18px;
+            br {display: none}
+          }
+        }
+      }
+    }
+  }
+}
+
+//Home_Features#
+#home_features {
+  width: 100%;
+  padding: 70px 0 70px 0;
+  background-color: #f7f7f7;
+  //home_features
+  .home_features {
+    //&_icons
+    &_icons {
+      h6 {
+        font-size: 30px;
+        color: $primary-color;
+        @include weight(black);
+        letter-spacing: 1px;
+        line-height: normal;
+        margin-bottom: 75px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -20px;
+          left: 0;
+          width: 70px;
+          height: 4px;
+          background-color: $secondary-color;
+        }
+        //Tablet
+        @include tablet {
+          font-size: 20px;
+          &::before {bottom: -15px}
+        }
+        //Mobil
+        @include mobil {
+          font-size: 12px;
+          &::before {bottom: -13px}
+        }
+      }
+      .icon_item {
+        @include flex;
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        i {color: $secondary-color}
+        .desc {
+          padding-left: 25px;
+          h5 {
+            letter-spacing: 0.3px;
+            @include weight(bold);
+            color: $primary-color;
+            line-height: normal;
+            font-size: 18px;
+          }
+          p {
+            padding-top: 15px;
+            @include weight(regular);
+            font-size: $size;
+            line-height: 20px;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+    }
+    //&_image
+    &_image {
+      img {width: 100%}
+    }
+    //Notebook
+    @include notebook {
+      //&_image
+      &_image {margin-top: 30px}
+    }
+    //X-Tablet
+    @include x-tablet {
+      //&_icons
+      &_icons {
+        .icon_item {
+          @include flex;
+          @include flex-direction(column);
+          .desc {
+            padding: 12px 0 0 0;
+            h6 {font-size: 16px}
+            p {padding-top: 10px}
+          }
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_icons
+      &_icons {
+        .icon_item {
+          .desc {
+            h5 {font-size: 12px;}
+            p {font-size: 12px; line-height: 18px; padding-top: 9px}
+          }
+        }
+      }
+    }
+  }
+}
+
+//Home_Projects#
+#home_projects {
+  width: 100%;
+  padding-top: 70px;
+  //title
+  .title {
+    text-align: center;
+    font-size: 30px;
+    color: $primary-color;
+    @include weight(black);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    line-height: normal;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      right: 0;
+      width: 70px;
+      height: 4px;
+      margin: 0 auto;
+      background-color: $secondary-color;
+    }
+    //Tablet
+    @include tablet {
+      font-size: 20px;
+      &::before {bottom: -15px}
+    }
+    //Mobil
+    @include mobil {
+      font-size: $size;
+      &::before {bottom: -13px}
+    }
+  }
+  //home_porjects_tab
+  .home_projects_tab {
+    padding-top: 70px;
+    //tab-list
+    .tab-list {
+      text-align: center;
+      li {
+        display: inline-block;
+        margin-right: 30px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          color: $primary-color;
+          @include weight(regular);
+          font-size: 18px;
+          letter-spacing: 0.3px;
+          text-transform: capitalize;
+        }
+        &.aktif {
+          a {color: $secondary-color}
+        }
+      }
+      //Tablet
+      @include tablet {
+        li {margin-right: 15px;}
+      }
+      //X-Tablet
+      @include x-tablet {
+        li {
+          a {font-size: 16px;}
+        }
+      }
+      //Mobil
+      @include mobil {
+        li {
+          display: block;
+          margin: 0 0 10px 0;
+          &:last-child {
+            margin: 0 0 0 0;
+          }
+          a {font-size: $size;}
+        }
+      }
+    }
+    //tab-content
+    .tab-content {
+      padding-top: 60px;
+      @include flex;
+      @include justify-content(space-between);
+      @include align-items(center);
+      @include flex-wrap(wrap);
+      //&_item
+      &_item {
+        width: 25%;
+        position: relative;
+        img {width: 100%;}
+        .item_caption {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          @include transition(0.3s);
+          background-color: #2f2f2f;
+          opacity: 0;
+          visibility: visible;
+          .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include translate(-50%, -50%);
+            text-align: center;
+            color: $base-color;
+            h6 {
+              @include weight(bold);
+              font-size: 24px;
+              letter-spacing: 0.3px;
+              line-height: normal;
+            }
+            p {
+              padding-top: 10px;
+              font-size: $size;
+              line-height: 20px;
+              letter-spacing: 0.3px;
+            }
+            .read-more {
+              display: inline-block;
+              margin-top: 15px;
+              color: $secondary-color;
+              @include weight(bold);
+              font-size: $size;
+              letter-spacing: 0.3px;
+              line-height: normal;
+            }
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          .item_caption {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+      //Large
+      @include large {
+        &_item {
+          width: 33.3%;
+        }
+      }
+      //Notebook
+      @include notebook {
+        &_item {
+          width: 50%;
+        }
+      }
+      //Tablet
+      @include tablet {
+        &_item {
+          width: 100%;
+          .item_caption {
+            .text {
+              h6 {font-size: 18px}
+
+            }
+          }
+        }
+      }
+      //X-Tablet
+      @include x-tablet {
+        &_item {
+          .item_caption {
+            .text {
+              h6 {font-size: 16px}
+            }
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        &_item {
+          .item_caption {
+            .text {
+              h6 {font-size: $size}
+              p {font-size: 12px; padding-top: 7px; line-height: 18px}
+              .read-more {font-size: 12px}
+            }
+          }
+        }
+      }
+      //X-Small
+      @include x-small {
+        &_item {
+          .item_caption {
+            .text {
+              h6 {font-size: 12px}
+              p {font-size: 10px; padding-top: 5px; line-height: 16px}
+              .read-more {font-size: 12px; margin-top: 10px}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Home_Blog#
+#home_blog {
+  width: 100%;
+  padding: 70px 0 70px 0;
+  //title
+  .title {
+    text-align: center;
+    font-size: 30px;
+    color: $primary-color;
+    @include weight(black);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    line-height: normal;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      right: 0;
+      width: 70px;
+      height: 4px;
+      margin: 0 auto;
+      background-color: $secondary-color;
+    }
+    //Tablet
+    @include tablet {
+      font-size: 20px;
+      &::before {bottom: -15px}
+    }
+    //Mobil
+    @include mobil {
+      font-size: $size;
+      &::before {bottom: -13px}
+    }
+  }
+  //home_blog
+  .home_blog {
+    padding-top: 70px;
+    //&_item
+    &_item {
+      img {width: 100%}
+      h6 {
+        padding-top: 20px;
+        line-height: normal;
+        a {
+          text-transform: capitalize;
+          font-size: 22px;
+          @include weight(bold);
+          color: $primary-color;
+        }
+      }
+      .blog-desc {
+        padding-top: 15px;
+        @include flex;
+        color: #b7b7b7;
+        .date, .comments {
+          @include flex;
+          @include align-items(center);
+          h5 {
+            padding-left: 6px;
+          }
+        }
+        .date {
+          padding-right: 20px;
+          border-right: 2px solid #b7b7b7;
+        }
+        .comments {
+          padding-left: 20px;
+        }
+      }
+      p {
+        padding-top: 15px;
+        font-size: $size;
+        line-height: 19px;
+        color: $three-color;
+      }
+      .read-more {
+        padding-top: 20px;
+        display: inline-block;
+        color: $secondary-color;
+        @include weight(regular);
+      }
+      //X-Tablet
+      @include x-tablet {
+        h6 {
+          a {font-size: 18px;}
+        }
+      }
+      //Mobil
+      @include mobil {
+        h6 {
+          padding-top: 15px;
+          a {font-size: $size;}
+        }
+        .blog-desc {
+          @include flex;
+          @include flex-direction(column);
+          .date, .comments {
+            h5 {font-size: 12px; padding-left: 5px}
+          }
+          .date {
+            padding-right: 0;
+            border: none;
+          }
+          .comments {
+            padding: 5px 0 0 0;
+          }
+        }
+        p {font-size: 12px; line-height: 16px}
+        a {font-size: 12px; padding-top: 15px}
+      }
+    }
+    //owl-dots
+    .owl-dots {
+      margin-top: 25px;
+      .owl-dot {
+        span {
+          width: 25px;
+          height: 7px;
+          background-color: $three-color;
+        }
+      }
+      .active {
+        span {
+          width: 40px;
+          background-color: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+//Home_Client#
+#home_client {
+  width: 100%;
+  padding: 70px 0 70px 0;
+  background-color: #f7f7f7;
+  //title
+  .title {
+    font-size: 30px;
+    color: $primary-color;
+    @include weight(black);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    line-height: normal;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      width: 70px;
+      height: 4px;
+      background-color: $secondary-color;
+    }
+    //Tablet
+    @include tablet {
+      font-size: 20px;
+      &::before {bottom: -15px}
+    }
+    //Mobil
+    @include mobil {
+      font-size: $size;
+      &::before {bottom: -13px}
+    }
+  }
+  //home_client
+  .home_client {
+    padding-top: 70px;
+    //&_item
+    &_item {
+      background-color: $base-color;
+      border: 1px solid #e5e6ec;
+      padding: 25px 30px;
+      .client_desc {
+        @include flex;
+        @include align-items(center);
+        .client_image {
+          img {@include border-radius(50%);}
+        }
+        .client_text {
+          padding-left: 20px;
+          h5 {
+            font-size: 16px;
+            color: $primary-color;
+            @include weight(bold);
+            letter-spacing: 0.3px;
+            line-height: normal;
+            text-transform: capitalize;
+          }
+          h6 {
+            padding-top: 5px;
+            font-size: $size;
+            color: $secondary-color;
+            letter-spacing: 0.3px;
+            line-height: normal;
+          }
+        }
+      }
+      p {
+        padding-top: 25px;
+        color: $three-color;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.5px;
+      }
+      //Tablet
+      @include tablet {
+        padding: 15px 20px;
+        p {font-size: $size; line-height: 20px; padding-top: 15px}
+      }
+      //Mobil
+      @include mobil {
+        padding: 10px 20px;
+        .client_desc {
+          @include flex;
+          @include flex-direction(column);
+          .client_text {
+            padding: 10px 0 0 0;
+            h5  {font-size: $size}
+            h6 {font-size: 12px;}
+          }
+        }
+        p {font-size: 12px; line-height: 18px; letter-spacing: 0.2px;}
+      }
+    }
+    //owl-nav
+    .owl-nav {
+      margin-top: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      .owl-prev, .owl-next {
+        width: 30px;
+        height: 30px;
+        background-color: #cccccc;
+        color: $base-color;
+        &:focus, &:hover {
+          background-color: $secondary-color;
+        }
+      }
+      //Tablet
+      @include tablet {
+        .owl-prev, .owl-next {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      //Mobil
+      @include mobil {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+//Homne_Brand
+#home_brand {
+  width: 100%;
+  padding: 70px 0 70px 0;
+  //title
+  .title {
+    font-size: 30px;
+    color: $primary-color;
+    @include weight(black);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    line-height: normal;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      width: 70px;
+      height: 4px;
+      background-color: $secondary-color;
+    }
+    //Tablet
+    @include tablet {
+      font-size: 20px;
+      &::before {bottom: -15px}
+    }
+    //Mobil
+    @include mobil {
+      font-size: $size;
+      &::before {bottom: -13px}
+    }
+  }
+  //home_brand
+  .home_brand {
+    padding-top: 70px;
+    //&_item
+    &_item {
+      padding: 20px 5px;
+      @include transition(0.3s);
+      border: 1px solid #ebebeb;
+      img {width: 50%; margin: 0 auto}
+    }
+    //owl-nav
+    .owl-nav {
+      margin-top: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      .owl-prev, .owl-next {
+        width: 30px;
+        height: 30px;
+        background-color: #cccccc;
+        color: $base-color;
+        &:focus, &:hover {
+          background-color: $secondary-color;
+        }
+      }
+      //Tablet
+      @include tablet {
+        .owl-prev, .owl-next {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      //Mobil
+      @include mobil {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+//İnformation#
+#information {
+  width: 100%;
+  padding: 25px 0 25px 0;
+  background-color: $secondary-color;
+  //information
+  .information {
+    @include flex;
+    @include justify-content(space-between);
+    @include align-items(center);
+    //&_text
+    &_text {
+      color: $base-color;
+      h5 {
+        text-transform: uppercase;
+        @include weight(black);
+        line-height: normal;
+        letter-spacing: 0.5px;
+        font-size: 30px;
+      }
+      h6 {
+        padding-top: 10px;
+        @include weight(regular);
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 0.3px;
+      }
+    }
+    //&_button
+    &_button {
+      button {
+        background-color: $base-color;
+        padding: 15px 30px;
+        @include border-radius(3px);
+        a {
+          color: $primary-color;
+          text-transform: uppercase;
+          @include weight(bold);
+          font-size: $size;
+        }
+      }
+    }
+    //Notebook
+    @include notebook {
+      @include flex;
+      @include flex-direction(column);
+      text-align: center;
+      //&_text
+      &_text {
+        h5 {font-size: 20px}
+        h6 {font-size: 16px; padding-top: 5px}
+      }
+      //&_button
+      &_button {
+        padding-top: 20px;
+      }
+    }
+    //Tablet
+    @include tablet {
+      //&_text
+      &_text {
+        h5 {font-size: 20px}
+        h6 {font-size: 16px; padding-top: 7px}
+      }
+      //&_button
+      &_button {
+        button {
+          padding: 10px 20px;
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_text
+      &_text {
+        h5 {font-size: $size; line-height: 20px}
+        h6 {font-size: $size; padding-top: 5px; line-height: 16px}
+      }
+      //&_button
+      &_button {
+        button {
+          padding: 10px 20px;
+          a {font-size: 12px}
+        }
+      }
+    }
+  }
+}
